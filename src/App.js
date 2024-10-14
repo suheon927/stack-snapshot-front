@@ -1,37 +1,40 @@
-import React, { Children } from "react";
-import { BrowserRouter } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, useRoutes } from "react-router-dom";
+import { ScrollToTop } from "./components/CommonUtil";
+import MainPage from "./pages/MainPage";
+import PicturePage from "./pages/PicturePage";
+import SelectFramePage from "./pages/SelectFramePage";
+import PictureCompletedPage from "./pages/PictureCompletedPage";
+import SelectPhotoPage from "./pages/SelectPhotoPage";
+import SuccessPage from "./pages/SuccessPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
-
-// import Mainpage from "./pages/MainPage";
-
-const App = () => {
-  const routes = useRoutes([
+const AppRoutes = () => {
+  const routes = [
     { path: '/', element: <MainPage /> },
     {
-      path: '/picture', element: <PictureMain />,
-      children: [
-        { path: '', element: <PictureResult /> }
-      ]
+        path: '/picture',
+        element: <PicturePage /> ,
+        children: [
+            { path: 'completed', element: <PictureCompletedPage />},
+            { path: 'select-frame', element: <SelectFramePage />},
+            { path: 'select-photo', element: <SelectPhotoPage />},
+            { path: 'success', element: <SuccessPage />}
+        ]
     },
-    {
-      path: '/edit-picture', element: <EditPicture />,
-      children: [
-        { path: '', element: <SelectFrame /> }
-      ]
-    },
-    {
-      path: '/success', element: <Success />,
-      children: [
-        { path: '', element: <SuccessResult /> }
-      ]
-    }
-  ]);
+    { path: '*', element: <NotFoundPage />}
+  ];
 
-  return routes;
+  return useRoutes(routes);
 };
 
-const AppWrapper = () => (
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+function App() {
+  return (
+      <Router>
+        <ScrollToTop />
+        <AppRoutes />
+      </Router>
+  );
+}
+
+export default App;
