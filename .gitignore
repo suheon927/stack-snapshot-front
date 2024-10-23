@@ -721,4 +721,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+process.env
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,git,react,intellij,vs,node,appbuilder

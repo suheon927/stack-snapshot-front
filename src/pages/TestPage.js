@@ -4,11 +4,12 @@ import React, {useEffect, useState} from "react";
  * 테스트 페이지
  */
 const TestPage = () => {
-
     const [message, setMessage] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:8080/api/test")
+        const apiUrl = `${process.env.REACT_APP_API_URL}/api/test`;
+
+        fetch(apiUrl)
             .then(res => res.text())
             .then(message => setMessage(message))
             .catch(err => console.error)
