@@ -8,22 +8,24 @@ import PictureCompletedPage from "./pages/PictureCompletedPage";
 import SelectPhotoPage from "./pages/SelectPhotoPage";
 import SuccessPage from "./pages/SuccessPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import TestPage from "./pages/TestPage";
 
 const AppRoutes = () => {
-  const routes = [
-    { path: '/', element: <MainPage /> },
-    {
-        path: '/picture',
-        element: <PicturePage /> ,
-        children: [
-            { path: 'completed', element: <PictureCompletedPage />},
-            { path: 'select-frame', element: <SelectFramePage />},
-            { path: 'select-photo', element: <SelectPhotoPage />},
-            { path: 'success', element: <SuccessPage />}
-        ]
-    },
-    { path: '*', element: <NotFoundPage />}
-  ];
+    const routes = [
+        {path: '/', element: <MainPage/>},
+        {
+            path: '/picture',
+            element: <PicturePage/>,
+            children: [
+                {path: 'completed', element: <PictureCompletedPage/>},
+                {path: 'select-frame', element: <SelectFramePage/>},
+                {path: 'select-photo', element: <SelectPhotoPage/>},
+                {path: 'success', element: <SuccessPage/>}
+            ]
+        },
+        {path: '/test', element: <TestPage/>},
+        {path: '*', element: <NotFoundPage/>}
+    ];
 
   return useRoutes(routes);
 };
