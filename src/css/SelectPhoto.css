@@ -1,0 +1,220 @@
+.logo{left: 27px;top:22px;width: 136px;height: 78px;}
+.next-btn{
+    display: grid; align-items: bottom; place-items: end; height: 100%
+}
+.grid-title{
+    grid-column-start: 2; grid-column-end: 5; display: grid; align-items: center; justify-items: center;
+}
+.grid-frame{display: grid; align-items: center; justify-items: center; height: 100%}
+.frame{position:absolute;}
+
+.frame1.small, .frame2.small, .frame3.small{
+    width: 125px;
+    height: 192px;
+}
+.frame1.small{
+    top:249px;
+    left:731px;
+}
+.frame2.small{
+    top:249px;
+    left:897px;
+}
+.frame3.small{
+    top:472px;
+    left:731px;
+}
+.frame4.small{
+    top:497px;
+    left:896px;
+}
+.frame1.big, .frame2.big, .frame3.big{
+    width: 330px;
+    height: 506px;
+    top:204px;
+    left:282px;
+}
+.frame4.small{
+    width: 188px;
+    height: 125px;
+}
+.frame4.big{
+    width: 495px;
+    height: 330px;
+    top:283px;
+    left:156px;
+}
+
+.small{    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);}
+
+.selected{
+    filter: brightness(70%);
+    border: 4px solid #0b6eef;
+}
+.grid{
+    position: absolute;
+    top:245px;
+    left:773px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 130px 130px;
+    grid-template-rows: 130px 130px 130px;
+    gap:17.13px 14.01px;
+}
+.container > div{
+    border: #404040 2px solid;
+    background-color: white;
+}
+.container > div > img{
+    padding: 1px;
+    width: 124px;
+    height: 124px;
+}
+
+
+
+.frame1.picture{
+    width: 149.568px;
+    height: 205.07px;
+}
+.frame1.picture > img{
+    width: 149.568px;
+    height: 205.07px;
+}
+
+.frame1.picture.picture1{
+    top: 216.09px;
+    left: 293.28px;
+}
+.frame1.picture.picture2{
+    top: 216.09px;
+    left: 451.75px;
+}
+.frame1.picture.picture3{
+    top: 430.87px;
+    left: 293.28px;
+}
+.frame1.picture.picture4{
+    top: 430.87px;
+    left: 451.75px;
+}
+
+
+
+
+
+.frame2.picture{
+    width: 149.468px;
+    height: 112.464px;
+}
+.frame2.picture > img{
+    width: 149.468px;
+    height: 112.464px;
+}
+
+.frame2.picture.picture1{
+    top: 216px;
+    left: 293.28px;
+}
+.frame2.picture.picture2{
+    top: 216px;
+    left: 451.65px;
+}
+.frame2.picture.picture3{
+    top: 334px;
+    left: 293.28px;
+}
+.frame2.picture.picture4{
+    top: 334px;
+    left: 451.65px;
+}
+.frame2.picture.picture5{
+    top: 452px;
+    left: 293.28px;
+}
+.frame2.picture.picture6{
+    top: 452px;
+    left: 451.65px;
+}
+
+
+
+.frame3.picture{
+    width: 149.468px;
+    height: 182.059px;
+}
+.frame3.picture > img{
+    width: 149.468px;
+    height: 182.059px;
+}
+
+.frame3.picture.picture1{
+    top: 223.09px;
+    left: 293.28px;
+}
+.frame3.picture.picture2{
+    top: 317.09px;
+    left: 451.404px;
+}
+.frame3.picture.picture3{
+    top: 415.09px;
+    left: 293.28px;
+}
+.frame3.picture.picture4{
+    top: 508.5px;
+    left: 451.404px;
+}
+
+.frame4.picture{
+    width: 187px;
+    height: 150px;
+}
+.frame4.picture.picture1{
+    top: 294px;
+    left: 173px;
+}
+.frame4.picture.picture2{
+    top: 294px;
+    left: 369px;
+}
+.frame4.picture.picture3{
+    top: 452px;
+    left: 173px;
+}
+.frame4.picture.picture4{
+    top: 452px;
+    left: 369px;
+}
+
+
+
+.big-grid{
+    display: grid;
+    grid-template-columns: 282px 330px 161px 274px 283px;
+    grid-template-rows:204px 506px 118px;
+    width: 100%;
+    height: 100%;
+}
+.photo-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-self: center;
+    justify-self: center;
+    
+} 
+.photo-grid > div{
+    width: 130px;
+    height: 130px;
+    background-color: white;
+    border: solid black 1px;
+}
+.photo-grid > div > img{
+    width: 130px;
+    height: 130px;
+}
+.send-file-btn{
+    padding-right: 60px;
+    padding-bottom: 60px;
+}
