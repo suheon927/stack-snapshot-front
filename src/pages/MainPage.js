@@ -5,6 +5,7 @@ import imageSrc3 from '../images/icons/유형3.png';
 import imageSrc1 from '../images/icons/유형1.png'; 
 import imageSrc4 from '../images/icons/유형4.png'; 
 import imageSrc5 from '../images/icons/유형5.png';
+import {useNavigate} from 'react-router-dom';
 
 /**
  * 메인 페이지
@@ -12,6 +13,8 @@ import imageSrc5 from '../images/icons/유형5.png';
  * author 김현나
  */
 const MainPage = () => {
+    const navigate = useNavigate();
+
   return (
     <div className="min-h-screen relative" style={{ overflow: 'hidden' }}>
       
@@ -44,7 +47,7 @@ const MainPage = () => {
       {/* 상단 컨텐츠 섹션 */}
       <div className="content-container" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, pointerEvents: 'none' }}>
         {/* 상단 로고 이미지 */}
-        <div className="grid items-left justify-items-center" style={{ pointerEvents: 'auto' }}>
+        <div className="items-left justify-items-center" style={{ pointerEvents: 'auto' }}>
           <img 
             src={imageSrc} 
             alt="stack_dev_logo1" 
@@ -53,8 +56,9 @@ const MainPage = () => {
         </div>
 
         {/* 첫 번째 텍스트 섹션 */}
-        <div style={{ position: 'absolute', top: '400px', left: '76px', pointerEvents: 'auto' }}>
-          <p style={{ fontSize: '24px' }}>
+        <div style={{ position: 'absolute', top: '420px', left: '80px', pointerEvents: 'auto' }}>
+          <p className="weight-600"
+              style={{ fontSize: '24px' }}>
             다시는 돌아오지 않을 지금을 사진으로
           </p>
         </div>
@@ -81,7 +85,7 @@ const MainPage = () => {
         <button
           style={{
             position: 'absolute',
-            top: '600px',  
+            top: '615px',
             left: '76px',
             width: '338px',
             height: '78px',
@@ -91,8 +95,14 @@ const MainPage = () => {
             borderRadius: '12px',
             cursor: 'pointer',
             border: '3px solid #020E2E',
-            pointerEvents: 'auto'
+            pointerEvents: 'auto',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '1rem'
           }}
+          className="weight-600"
+          onClick={() => navigate('/picture')}
         >
           추억 만들러가기
 
