@@ -211,7 +211,6 @@ const SelectPhotoPage = () => {
             })}
         </>}
         
-        <Outlet/>
     </div>
   )
 };
