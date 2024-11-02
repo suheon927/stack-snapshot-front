@@ -67,15 +67,14 @@ const MainPage = () => {
         <div style={{ position: 'absolute', top: '450px', left: '76px', pointerEvents: 'auto' }}>
           <p
             style={{
-              fontFamily: 'Pretendard',        
-              fontSize: '110px',              
-              fontWeight: '800',               
-              color: '#FFF',                    
+              fontSize: '110px',
+              color: '#FFF',
               WebkitTextStrokeWidth: '3px',     
               WebkitTextStrokeColor: '#4E4E4E', 
               lineHeight: 'normal',             
               letterSpacing: '4.4px',           
             }}
+            className="weight-800"
           >
             스택네컷
           </p>
