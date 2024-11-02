@@ -102,7 +102,7 @@ const MainPage = () => {
               gap: '1rem'
           }}
           className="weight-600"
-          onClick={() => navigate('/picture')}
+          onClick={() => navigate('/picture/select-frame')}
         >
           추억 만들러가기
 
