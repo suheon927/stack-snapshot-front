@@ -48,10 +48,10 @@ const MainPage = () => {
       <div className="content-container" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, pointerEvents: 'none' }}>
         {/* 상단 로고 이미지 */}
         <div className="items-left justify-items-center" style={{ pointerEvents: 'auto' }}>
-          <img 
-            src={imageSrc} 
-            alt="stack_dev_logo1" 
-            style={{ width: '238px', height: '60px', paddingTop: '36px', paddingLeft: '66px' }} 
+          <img
+            src={imageSrc}
+            alt="stack_dev_logo1"
+            style={{ width: '238px', height: '60px', paddingTop: '36px', paddingLeft: '66px' }}
           />
         </div>
 
@@ -69,10 +69,10 @@ const MainPage = () => {
             style={{
               fontSize: '110px',
               color: '#FFF',
-              WebkitTextStrokeWidth: '3px',     
-              WebkitTextStrokeColor: '#4E4E4E', 
-              lineHeight: 'normal',             
-              letterSpacing: '4.4px',           
+              WebkitTextStrokeWidth: '3px',
+              WebkitTextStrokeColor: '#4E4E4E',
+              lineHeight: 'normal',
+              letterSpacing: '4.4px',
             }}
             className="weight-800"
           >
