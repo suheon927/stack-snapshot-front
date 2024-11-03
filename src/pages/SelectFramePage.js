@@ -74,6 +74,8 @@ const SelectFramePage = () => {
             <div></div>
             <div className="div-frame-grid">
                 <div className="frame-grid">
+                
+                
                     {Object.keys(frames).map((value, index) => {
                             return (
                                 <img className={`frame ${value} small ${frames[value]["selected"] ? "selected" : ""}`}  src={frames[value]["frame"]} alt={`${value}`} onClick={()=>{change_frame(value)}}></img>
@@ -96,7 +98,6 @@ const SelectFramePage = () => {
             </Link>
             :
             <></>}</div>
-            <Outlet/>
         </div>
       )
 };
