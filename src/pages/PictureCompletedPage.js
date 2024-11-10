@@ -1,12 +1,26 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo1 from '../images/icons/stack_dev_logo2.png';
-import logo2 from '../images/icons/arrow-right-black.png';
+import logo2 from '../images/icons/arrow_right_black.png';
 import logo3 from '../images/icons/PictureCompletedPage_imoticon.png';
+
+
+
+/**
+ * 사진 촬영 페이지
+ * @since 2024.10.17
+ * author 임석진
+ */
 
 const PictureCompletedPage = () => {
     const location = useLocation();
-    const { photoUrls = [], teamId } = location.state || {};
+    const navigate = useNavigate(); // Initialize the useNavigate hook
+    const { photoUrls = [] } = location.state || {};
+
+
+    const handleNextClick = () => {
+        navigate('/picture/select-photo', { state: { photoUrls } }); // photoUrls 데이터를 함께 전달
+    };
 
     return (
         <div className="camera-container background-yellow">
@@ -16,7 +30,7 @@ const PictureCompletedPage = () => {
             <img src={logo3} alt="imoticon" className="PictureCompletedPage_imoticon" />
 
             <div className="camera-button-container">
-                <button className="next-button weight-500">
+                <button className="next-button weight-500" onClick={handleNextClick}>
                     <span className="weight-700">다음</span>
                     <img src={logo2} alt="Arrow-right" className="arrow-right" />
                 </button>

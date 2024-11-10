@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import "../css/picture.css";
@@ -6,6 +5,14 @@ import logo1 from "../images/icons/stack_dev_logo2.png";
 import logo2 from "../images/icons/camera_icon.png";
 import logo3 from "../images/icons/picturepage_imoticon.png";
 import chickpeasImage from "../images/icons/chickpeas_7.png";
+import {useRef, useState} from "react";
+
+
+/**
+ * 사진 촬영 페이지
+ * @since 2024.10.17
+ * author 임석진
+ */
 
 const PicturePage = ({ setTeamId }) => {
     const navigate = useNavigate();
