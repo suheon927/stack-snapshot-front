@@ -5,8 +5,7 @@ import logo1 from "../images/icons/stack_dev_logo2.png";
 import logo2 from "../images/icons/camera_icon.png";
 import logo3 from "../images/icons/picturepage_imoticon.png";
 import chickpeasImage from "../images/icons/chickpeas_7.png";
-import {useRef, useState} from "react";
-
+import { useRef, useState } from "react";
 
 /**
  * 사진 촬영 페이지
@@ -32,7 +31,8 @@ const PicturePage = ({ setTeamId }) => {
         3: { width: 272, height: 328 },
         4: { width: 340, height: 273 },
     };
-    const { width, height } = frameSizes[selectedFrameID];
+
+    const { width, height } = frameSizes[selectedFrameID] || frameSizes[1];
 
     // 카메라 시작 핸들러
     const startCamera = async () => {
@@ -56,7 +56,7 @@ const PicturePage = ({ setTeamId }) => {
         const formData = new FormData();
 
         for (let i = 0; i < photoCount; i++) {
-            for (let j = 1; j > 0; j--) {
+            for (let j = 5; j > 0; j--) {
                 setCountdown(j);
                 await new Promise((resolve) => setTimeout(resolve, 1000));
             }
